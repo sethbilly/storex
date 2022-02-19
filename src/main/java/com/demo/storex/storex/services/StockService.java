@@ -1,20 +1,21 @@
 package com.demo.storex.storex.services;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Optional;
 import com.demo.storex.storex.models.Stock;
 import com.demo.storex.storex.repositories.StockRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Transactional(readOnly = true)
 @Service
+@Transactional(readOnly = true)
 public class StockService {
-    
     
     private final StockRepository stockRepository;
 

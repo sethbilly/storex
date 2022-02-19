@@ -24,7 +24,7 @@ public class Stock {
     private double currentPrice;
     @Column(name = "lastUpdate")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date lastUpdate;
+    private Date lastUpdate = new Date();
 
 
     public Stock() {
