@@ -26,8 +26,8 @@ public class StockController {
     }
 
     @GetMapping("/stocks")
-    public ResponseEntity<List<Stock>> getStocks(@RequestParam(defaultValue = 0) int pageNo, 
-        @RequestParam(defaultValue = 5) int pageSize){
+    public ResponseEntity<List<Stock>> getStocks(@RequestParam(defaultValue = "0") Integer pageNo, 
+        @RequestParam(defaultValue = "5") Integer pageSize){
             List<Stock> listOfStocks = stockService.getAllStocks(pageNo, pageSize);
             return new ResponseEntity<>(listOfStocks, HttpStatus.OK);
     }
