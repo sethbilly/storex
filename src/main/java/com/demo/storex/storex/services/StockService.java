@@ -47,12 +47,8 @@ public class StockService {
         return stockRepository.save(stockToUpdate);
     }
 
-    public void deleteStock(Stock stockToDelete) {
-        stockRepository.delete(stockToDelete);
-    }
-
-    public long count() {
-        return stockRepository.count();
+    public void deleteStock(long id) {
+        stockRepository.deleteById(id);
     }
 
 }
